@@ -1,6 +1,6 @@
 # cpp-implementations
 
-This repository contains implementations of chosen, interesting C++ standard library features. 
+This repository contains implementations of chosen, interesting C++ standard library features.
 It also contains different implementations of other useful features from other libraries or own.
 
 It focuses on the best implementation possible, unit testing, mocking and good practices.
@@ -32,7 +32,9 @@ Each std:: feature should be implemented so that it can be used as a direct subs
 **`other`** contains implementations of other library features, either from other libraries, modified std:: features or own ones.
 
 Every feature should have it's own directory with it's name, in that directory there should be `src` or/and `include`, `test` and `example` directories and a `CMakeLists.txt` file.
+
 If feature specific CMake configuration is needed, it can be put under `cmake/`, if you think the CMake config can be used by others, put it under `src/shared/cmake/`.
+
 If you notice other features containing a suitable CMake configuration for the feature you want to add, move it from local `cmake/`, to `src/shared/cmake/` and make sure the feature you have changed
 still compiles fine:
 ```
@@ -52,12 +54,12 @@ src/
         ├── cmake/ # not needed in this case
         └── tests/
 ```
-If the feature doesn't have any .cpp (where most of the time it should not) files, `src` can be omitted. 
+If the feature doesn't have any .cpp (where most of the time it should not) files, `src` can be omitted.
 `examples` folder should contain at least one example
 `tests` folder should contain at least one, but ideally a complete set of tests for the object.
 
 Every feature should have a `README.md` file that, minimally, lists all the users that contributed to a certain feature.
-Ideally the readme file should also contain a description of the feature, implementation details, design choices and possibly examples. 
+Ideally the readme file should also contain a description of the feature, implementation details, design choices and possibly examples.
 
 The `CMakeLists.txt` file **in a root of std/ and other/** should only have `add_subdirectory` calls to
 
